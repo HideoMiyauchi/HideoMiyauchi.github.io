@@ -14,7 +14,7 @@ social-github: HideoMiyauchi
 social-youtube: channel/UCyheSr7bp_ySygeQwl76yMg
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics

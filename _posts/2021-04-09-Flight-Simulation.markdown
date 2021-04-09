@@ -61,7 +61,13 @@ Data shown here is a composite of many sources. The object was to use flight tes
 文献[^fn-nth-2]に記載されたXB-70AのNondimensional Stability Derivatives(無次元微係数)は、機体の大きさや速度に拘わらず機体の形状のみに対する空気力の大きさを表したもので、これを動圧や翼面積・空気密度を考慮したDimensional Stability Derivatives(有次元微係数)に変換します。
 その変換方法は文献[^footnote]を参考にしています。同時に、長さ・重さ・度数の単位変換も必要です。
 
-\$\$ 無次元微係数 \xrightarrow{単位変換・有次元化} 有次元微係数(X_uなど) \$\$
+\$\$
+\begin{CD}
+無次元微係数\cr \\
+@VV{単位変換・有次元化}V\cr \\
+有次元微係数(X_uなど)
+\end{CD}
+\$\$
 
 <!--*****************************************************-->
 ## 微小撹乱運動方程式
@@ -116,6 +122,16 @@ Data shown here is a composite of many sources. The object was to use flight tes
 このように表すことができ、
 回転の変換行列は次のようになります。
 
+\$\$ a11 = \cos \theta \ \cos \psi \$\$
+\$\$ a12 = \sin \phi \ \sin \theta \ \cos \psi - \cos \phi \ \sin \psi \$\$
+\$\$ a13 = \cos \phi \ \sin \theta \ \cos \psi + \sin \phi \ \sin \psi \$\$
+\$\$ a21 = \cos \theta \ \sin \psi \$\$
+\$\$ a22 = \sin \phi \ \sin \theta \ \sin \psi + \cos \phi \ \cos \psi \$\$
+\$\$ a23 = \cos \phi \ \sin \theta \ \sin \psi - \sin \phi \ \cos \psi \$\$
+\$\$ a31 = \sin \theta \$\$
+\$\$ a32 = \sin \phi \ \cos \theta \$\$
+\$\$ a33 = \cos \phi \ \cos \theta \$\$
+
 \$\$
 \left\lceil\matrix{
 \dot X_E\cr
@@ -123,9 +139,9 @@ Data shown here is a composite of many sources. The object was to use flight tes
 \dot Z_E
 }\right\rceil
  = \left\lceil\matrix{
-\cos \theta \ \cos \psi & \sin \phi \ \sin \theta \ \cos \psi - \cos \phi \ \sin \psi & \cos \phi \ \sin \theta \ \cos \psi + \sin \phi \ \sin \psi\cr
-\cos \theta \ \sin \psi & \sin \phi \ \sin \theta \ \sin \psi + \cos \phi \ \cos \psi & \cos \phi \ \sin \theta \ \sin \psi - \sin \phi \ \cos \psi\cr
-\sin \theta & \sin \phi \ \cos \theta & \cos \phi \ \cos \theta
+a11, & a12, & a13\cr
+a21, & a22, & a23\cr
+a31, & a32, & a33
 }\right\rceil
 \left\lceil\matrix{
 u\cr
