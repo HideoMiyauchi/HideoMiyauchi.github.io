@@ -168,6 +168,11 @@ w
 ![Destop View](/assets/img/20210405/figure2.jpg){: width="200" .right}
 ![Destop View](/assets/img/20210405/FlightMove.gif){: width="500" .right}
 
+YouTube(Android) <https://youtu.be/zlw8Ba14BAs>
+
+YouTube(Android) <https://youtu.be/eNX422cPve4>
+
+
 <!--*****************************************************-->
 ## 最後に
 映画「インデペンデンス・デイ」のラストで爆弾ごと突っ込む老パイロットの操縦を見ると
