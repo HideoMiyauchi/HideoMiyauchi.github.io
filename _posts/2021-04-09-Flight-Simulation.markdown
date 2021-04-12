@@ -77,7 +77,7 @@ Data shown here is a composite of many sources. The object was to use flight tes
 縦方向
 : 縦方向の運動方程式は次のように表されます。
 なお、フラップ項を削除し、スロットル項を追加しています。
-縦方向の状態変数は $$\{\ u,\ \alpha,\ q,\ \theta,\ \}$$ です。
+縦方向の状態変数は $$\{\ u,\ \alpha,\ q,\ \theta\ \}$$ です。
 
 \$\$ \dot u = X_u\ u + X_\alpha\ \alpha - \frac{g\ \cos \theta_0}{57.3}\theta + {X_\delta}_t\ \delta_t \$\$
 
@@ -90,7 +90,7 @@ Data shown here is a composite of many sources. The object was to use flight tes
 横方向
 : 横方向の運動方程式は次のように表されます。
 ラダー項は削除しています。ラダーはロール動作の際に横滑りを減らす重要な働きをするのですが、本プログラムでは横滑りは考慮していません。
-横方向での状態変数は $$\{\ \beta,\ p,\ r,\ \phi,\ \}$$ です。
+横方向での状態変数は $$\{\ \beta,\ p,\ r,\ \phi\ \}$$ です。
 
 \$\$ \dot \beta = \bar Y_\beta\ \beta + \frac{\alpha_0}{57.3}\ p - r + \frac{g\ \cos \theta_0}{V}\ \phi \$\$
 
