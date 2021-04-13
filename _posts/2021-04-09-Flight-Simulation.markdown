@@ -170,8 +170,7 @@ w
 
 YouTube(Android) <https://youtu.be/zlw8Ba14BAs>
 
-YouTube(Android) <https://youtu.be/eNX422cPve4>
-
+YouTube(Android) <https://youtu.be/LY_wF0yFpHs>
 
 <!--*****************************************************-->
 ## 最後に
