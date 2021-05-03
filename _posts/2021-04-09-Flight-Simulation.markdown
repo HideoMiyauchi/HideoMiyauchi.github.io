@@ -168,9 +168,9 @@ w
 ![Destop View](/assets/img/20210405/figure2.jpg){: width="200" .right}
 ![Destop View](/assets/img/20210405/FlightMove.gif){: width="500" .right}
 
-YouTube(Android) <https://youtu.be/zlw8Ba14BAs>
+YouTube(Android+OpenGL ES) <https://youtu.be/zlw8Ba14BAs>
 
-YouTube(Android) <https://youtu.be/IC1SWpeS0UE>
+YouTube(Android+ARCore) <https://youtu.be/DFCyFKROuhE>
 
 <!--*****************************************************-->
 ## 最後に
