@@ -170,7 +170,7 @@ w
 
 YouTube(Android+OpenGL ES) <https://youtu.be/zlw8Ba14BAs>
 
-YouTube(Android+ARCore) <https://youtu.be/DFCyFKROuhE>
+YouTube(Android+ARCore) <https://youtu.be/LsMB4KutEMk>
 
 <!--*****************************************************-->
 ## 最後に
