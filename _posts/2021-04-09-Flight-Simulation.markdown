@@ -168,9 +168,11 @@ w
 ![Destop View](/assets/img/20210405/figure2.jpg){: width="200" .right}
 ![Destop View](/assets/img/20210405/FlightMove.gif){: width="500" .right}
 
-YouTube(Android+OpenGL ES) <https://youtu.be/zlw8Ba14BAs>
+YouTube ( Android + OpenGL ES )
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zlw8Ba14BAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-YouTube(Android+ARCore) <https://youtu.be/UaPXjvirGAA>
+YouTube( Android + ARCore )
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UaPXjvirGAA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!--*****************************************************-->
 ## 最後に
