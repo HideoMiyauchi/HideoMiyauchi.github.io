@@ -1,0 +1,156 @@
+---
+layout: post
+title: Augmented Reality (AR)
+date: 2021-05-30 9:08:00 +0900
+description: Flight Dynamics with ARCore
+img: 20210601/flightwitharcore.png
+categories: [AR, ARCore]
+tags: [AR]
+---
+<!--*****************************************************-->
+## Overview
+GoogleのARCore技術を利用したAugmented Reality (AR)拡張現実のAndroidアプリを開発しました。
+Androidのカメラの中で3Dモデルの飛行機を任意の経路で飛ばすことができます。
+
+<!--*****************************************************-->
+## Source Code
+Source code may be found as the Kotlin program in the GitHub repository.
+<br>
+<https://github.com/HideoMiyauchi/AndroidApp>
+<br>
+
+<!--*****************************************************-->
+## Usage
+
+### 準備
+アプリの中で飛行機の制御用として用いる為に、どちらかの拡張画像(Augmented Images)を4cm〜5cm程度の大きさで印刷してください。印刷ができない場合は、日本円の1000円紙幣を使うこともできます。
+<br>
+<a href="/assets/img/20210601/earthphoto.jpg">
+  <img src="/assets/img/20210601/earthphoto.jpg" height="150">
+</a>
+&nbsp;
+<a href="/assets/img/20210601/fighter.jpg">
+  <img src="/assets/img/20210601/fighter.jpg" height="150">
+</a>
+
+### インストールと起動
+本アプリをインストールし起動します。
+その際、カメラ使用許可を与えてください。
+続けてダイアログに従ってGooglePlay開発者サービス(AR)をインストールしてください。
+<br>
+<a href='https://play.google.com/store/apps/details?id=com.google.ar.core&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png' width="200" /></a>
+<br>
+その後、左のナビゲーションバーのFlight Simulation(AR)を選択して開始します。
+
+### 拡張画像による飛行方法
+①環境理解
+: スマホを縦に持って周囲を写してください。
+アプリは周囲の環境の特徴点と平面を検出し、認識した平面に白いメッシュを描きます。
+細かいメッシュは遠い場所の平面を、荒いメッシュは近い場所を表します。
+メッシュが現れるまで時間が掛かる場合がありますので辛抱強く待ってください。
+
+②アンカーの決定
+: 現れたメッシュの１つをタップすることで、そのメッシュは実世界の基準座標(Anchor)となって、
+仮想オブジェクト=飛行機を表示します。同時にメッシュの表示は消えます。
+別のメッシュを選択したい場合は再びタップすることでメッシュを表示できます。
+
+③拡張画像
+: 準備で印刷した拡張画像(Augmented Image)を画面内にかざします。カメラから良く見えるようにかざしてください。
+
+①
+<a href="/assets/img/20210601/img1.jpg">
+  <img src="/assets/img/20210601/img1.jpg" width="150">
+</a>
+②
+<a href="/assets/img/20210601/img2.jpg">
+  <img src="/assets/img/20210601/img2.jpg" width="150">
+</a>
+③
+<a href="/assets/img/20210601/img3.jpg">
+  <img src="/assets/img/20210601/img3.jpg" width="150">
+</a>
+
+④拡張画像の認識
+: アプリが拡張画像を認識すると、その周囲に小さな仮想枠を表示します。
+この状態で拡張画像の向きを少し変えると、連動して飛行機の向きが変わります。
+拡張画像を動かして飛行機を真っ直ぐに保つ角度を習得してください。
+大きく拡張画像を動かしてしまうと認識できずに仮想枠が連動しなくなるので、仮想枠が追従できる程度の大きさで拡張画像を動かす練習をしてください。
+
+⑤別の拡張画像を用いる
+: 地球画像以外でも認識できます。写真のように日本円の1000円紙幣でも使えます。
+
+⑥飛行開始
+: "START"ボタンを押すと飛行機が進み始めます。
+拡張画像の動きで飛行機の飛行ルートを変えることができます。
+右のシークバーで飛行機の速度を調整できます。
+途中で見失った場合や制御不能に陥った場合は"RESET"ボタンを押してください。
+
+④
+<a href="/assets/img/20210601/img4.jpg">
+  <img src="/assets/img/20210601/img4.jpg" width="150">
+</a>
+⑤
+<a href="/assets/img/20210601/img5.jpg">
+  <img src="/assets/img/20210601/img5.jpg" width="150">
+</a>
+⑤
+<a href="/assets/img/20210601/img8.jpg">
+  <img src="/assets/img/20210601/img8.jpg" width="150">
+</a>
+⑥
+<a href="/assets/img/20210601/img6.jpg">
+  <img src="/assets/img/20210601/img6.jpg" width="150">
+</a>
+
+### デモによる飛行方法
+拡張画像無しのデモフライトを行うことができます。上記①と②の手順⑤に"DEMO"にチェックをし"START"ボタンを押してください。すると決められた経路を飛行しはじめます。
+右のシークバーで飛行機の速度を調整できます。
+<br>
+<a href="/assets/img/20210601/img7.jpg">
+  <img src="/assets/img/20210601/img7.jpg" width="150">
+</a>
+<br>
+
+<!--*****************************************************-->
+## 内部構造
+ARCoreセッションは、事前に参照画像を登録しておいた拡張画像データベース(Augmented Image Database)を開始時に読み取ります。次にカメラデバイスにアクセスし、撮像画像からアンカーとなる平面と拡張画像の検出を行います。
+検出された平面と拡張画像は実世界座標系での位置・姿勢として追跡され、カメラデバイスが移動・回転しても常に補正計算されます。
+このアプリでは拡張画像の三次元姿勢(Pose)を飛行機の昇降舵(elevator)と補助翼(aileron)に連動させ、Flight Dynamicsで飛行経路を計算し、3DオブジェクトとしてOpenGLで描画を行っています。
+<br>
+<img src="/assets/img/20210601/figure.png" width="694" />
+<br>
+
+<!--*****************************************************-->
+## 拡張画像について
+拡張画像(Augmented Image)について触れておきます。
+Googleからの要件は次のとおりです。
+<br>
+<img src="/assets/img/20210601/monalisa.jpg" width="150" style="float: right">
+<li>The image's resolution should be at least 300 x 300 pixels. Using images with high resolution does not improve performance.</li>
+<li>Reference images can be provided in PNG or JPEG file format.</li>
+<li>Color information is not used. Both color and equivalent grayscale images can be used as reference images or by users at runtime.</li>
+<li>Avoid images with heavy compression as this interferes with feature extraction.</li>
+<li>Avoid images with that contain a large number of geometric features, or very few features (e.g. barcodes, QR codes, logos and other line art) as this will result in poor detection and tracking performance.</li>
+<li>Avoid images with repeating patterns as this also can causes issues with detection and tracking.</li>
+<li>Use the arcoreimg tool included in the ARCore SDK to get a quality score between 0 and 100 for each image. We recommend a quality score of at least 75.</li>
+このようにARCoreが認識できる拡張画像は品質スコアが75以上が推奨になっています。
+Googleが提供している地球画像の品質スコアは100でしたが、自分が作成した飛行機画像は90でした。1000円札では70でかろうじてセーフでした。
+さらに色々な画像を調べてみましたが品質スコアが高い画像がなかなか見つかりません。絵画であれば特徴点も多く、幾何学的でも無いのでスコアが上がるだろうと期待していたのですが、レオナルド・ダ・ヴィンチのモナリザでも品質スコアは70でした。
+<br>
+この後、ARCoreのドキュメントに次の一文を見つけました。
+<br>
+A good reference image is hard to spot with the human eye.
+<br>
+まさにこれだと思います。
+<br>
+
+<!--*****************************************************-->
+## 最後に
+以前は外部のジャイロセンサーからの姿勢データを元に飛行機を動かしていましたが、拡張画像を使えばジャイロ自体が不要になるだろうという発想で今回の開発をしました。ほどほど実現できたと思いますが、拡張画像の動きを大きくするとARCoreが追跡できなくなることがあるので、今後の改善に期待したいところです。
+
+<br>
+YouTube( Android + ARCore )
+<iframe width="700" height="600" src="https://www.youtube.com/embed/rO4oCE7CrMw" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
