@@ -54,9 +54,6 @@ Source code may be found as the Kotlin program in the GitHub repository.
 仮想オブジェクト=飛行機を表示します。同時にメッシュの表示は消えます。
 別のメッシュを選択したい場合は再びタップすることでメッシュを表示できます。
 
-③拡張画像
-: 準備で印刷した拡張画像(Augmented Image)を画面内にかざします。カメラから良く見えるようにかざしてください。
-
 ①
 <a href="/assets/img/20210601/img1.jpg">
   <img src="/assets/img/20210601/img1.jpg" width="150">
@@ -65,10 +62,9 @@ Source code may be found as the Kotlin program in the GitHub repository.
 <a href="/assets/img/20210601/img2.jpg">
   <img src="/assets/img/20210601/img2.jpg" width="150">
 </a>
-③
-<a href="/assets/img/20210601/img3.jpg">
-  <img src="/assets/img/20210601/img3.jpg" width="150">
-</a>
+
+③拡張画像
+: 準備で印刷した拡張画像(Augmented Image)を画面内にかざします。カメラから良く見えるようにかざしてください。
 
 ④拡張画像の認識
 : アプリが拡張画像を認識すると、その周囲に小さな仮想枠を表示します。
@@ -76,19 +72,18 @@ Source code may be found as the Kotlin program in the GitHub repository.
 拡張画像を動かして飛行機を真っ直ぐに保つ角度を習得してください。
 大きく拡張画像を動かしてしまうと認識できずに仮想枠が連動しなくなるので、仮想枠が追従できる程度の大きさで拡張画像を動かす練習をしてください。
 
-⑤別の拡張画像を用いる
-: 地球画像以外でも認識できます。写真のように日本円の1000円紙幣でも使えます。
-
-⑥飛行開始
-: "START"ボタンを押すと飛行機が進み始めます。
-拡張画像の動きで飛行機の飛行ルートを変えることができます。
-右のシークバーで飛行機の速度を調整できます。
-途中で見失った場合や制御不能に陥った場合は"RESET"ボタンを押してください。
-
+③
+<a href="/assets/img/20210601/img3.jpg">
+  <img src="/assets/img/20210601/img3.jpg" width="150">
+</a>
 ④
 <a href="/assets/img/20210601/img4.jpg">
   <img src="/assets/img/20210601/img4.jpg" width="150">
 </a>
+
+⑤別の拡張画像を用いる
+: 地球画像以外でも認識できます。写真のように日本円の1000円紙幣でも使えます。
+
 ⑤
 <a href="/assets/img/20210601/img5.jpg">
   <img src="/assets/img/20210601/img5.jpg" width="150">
@@ -97,6 +92,13 @@ Source code may be found as the Kotlin program in the GitHub repository.
 <a href="/assets/img/20210601/img8.jpg">
   <img src="/assets/img/20210601/img8.jpg" width="150">
 </a>
+
+⑥飛行開始
+: "START"ボタンを押すと飛行機が進み始めます。
+拡張画像の動きで飛行機の飛行ルートを変えることができます。
+右のシークバーで飛行機の速度を調整できます。
+途中で見失った場合や制御不能に陥った場合は"RESET"ボタンを押してください。
+
 ⑥
 <a href="/assets/img/20210601/img6.jpg">
   <img src="/assets/img/20210601/img6.jpg" width="150">
@@ -150,7 +152,7 @@ A good reference image is hard to spot with the human eye.
 
 <br>
 YouTube( Android + ARCore )
-<iframe width="700" height="600" src="https://www.youtube.com/embed/rO4oCE7CrMw" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/rO4oCE7CrMw" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
 
