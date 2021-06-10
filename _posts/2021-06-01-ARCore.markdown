@@ -107,11 +107,10 @@ Source code may be found as the Kotlin program in the GitHub repository.
 ### デモによる飛行方法
 拡張画像無しのデモフライトを行うことができます。上記①と②の手順⑤に"DEMO"にチェックをし"START"ボタンを押してください。すると決められた経路を飛行しはじめます。
 右のシークバーで飛行機の速度を調整できます。
-<br>
+
 <a href="/assets/img/20210601/img7.jpg">
   <img src="/assets/img/20210601/img7.jpg" width="150">
 </a>
-<br>
 
 <!--*****************************************************-->
 ## 内部構造
@@ -154,5 +153,16 @@ A good reference image is hard to spot with the human eye.
 YouTube( Android + ARCore )
 <iframe src="https://www.youtube.com/embed/rO4oCE7CrMw" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<!--*****************************************************-->
+<h3 id="abc">PRIVACY POLICY</h3>
+
+This privacy policy has been compiled to better serve those who are concerned with how we treat information and what permissions are required to use this app.
 <br>
+Camera permission is required to take pictures of the environment and to overlay the 3D object.
+<br>
+This app do not collect any sensitive personal information from users.
+<br>
+This app runs on Google Play Services for AR (ARCore), which is provided by Google LLC and governed by the Google Privacy Policy.
+<br>
+ARCore is to power this session, Google will process visual data from your camera.
 
