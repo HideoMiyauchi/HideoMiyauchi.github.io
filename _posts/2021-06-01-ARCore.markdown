@@ -154,7 +154,7 @@ YouTube( Android + ARCore )
 <iframe src="https://www.youtube.com/embed/rO4oCE7CrMw" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!--*****************************************************-->
-<h3 id="abc">PRIVACY POLICY</h3>
+<h3 id="privacypolicy">PRIVACY POLICY</h3>
 
 This privacy policy has been compiled to better serve those who are concerned with how we treat information and what permissions are required to use this app.
 <br>
