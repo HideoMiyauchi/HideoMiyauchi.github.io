@@ -34,11 +34,13 @@ Source code may be found as the Kotlin program in the GitHub repository.
 </a>
 
 ### インストールと起動
-本アプリをインストールし起動します。
-その際、カメラ使用許可を与えてください。
-続けてダイアログに従ってGooglePlay開発者サービス(AR)をインストールしてください。
+本アプリをGoogle Playよりインストールし起動します。
 <br>
-<a href='https://play.google.com/store/apps/details?id=com.google.ar.core&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png' width="200" /></a>
+<a href='https://play.google.com/store/apps/details?id=hideo.miyauchi.android&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png' width="200" /></a>
+<br>
+その際、カメラ使用許可を与えてください。
+<br>
+起動時のダイアログに従ってGooglePlay開発者サービス(AR)をインストールしてください。
 <br>
 その後、左のナビゲーションバーのFlight Simulation(AR)を選択して開始します。
 
