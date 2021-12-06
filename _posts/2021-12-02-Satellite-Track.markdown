@@ -2,7 +2,7 @@
 layout: post
 title: Satellite Track
 date: 2021-12-02 10:00:00 +0900
-description: 
+description: satellite tracking
 img: 20211202/jaxa1.jpg
 categories: [Satellite]
 tags: [Satellite]
@@ -48,7 +48,7 @@ SDRサーバーの観測地のリスト (websdr.txt)から、
 ## Source Code
 Source code may be found as the Python3 program in the GitHub repository.
 
-<https://github.com/HideoMiyauchi/SatelliteTrack>
+[github.com/HideoMiyauchi/SatelliteTrack](https://github.com/HideoMiyauchi/SatelliteTrack)
 
 <!--*****************************************************-->
 ## Usage
@@ -60,11 +60,10 @@ $ python satellite_track.py
 
 <!--*****************************************************-->
 ## 実行結果
-
 このプログラムを実行すると、受信できる人工衛星と観測地サーバーと時刻のリストが表示されます。
 <br>
 リストの見方について説明します。
-
+<br>
 ```
 (省略)
 ----------------------
@@ -86,18 +85,17 @@ CAS-6は2019年12月に打ち上げられた中華人民共和国の小型人工
 490mmx499mmx430mmの立方体に太陽電池を搭載し、質量は約35kgです。
 CWテレメトリビーコン周波数145.91MHzになっています。
 <br>
-<br>
-![cas6photo](/assets/img/20211202/tianqin-1-cas-6__2.jpg){: width="400" .right}
+![cas6photo](/assets/img/20211202/tianqin-1-cas-6__2.jpg){: width="300" }
 <br>
 <br>
 次に、観測地の名前とSDRサーバーへのアクセスURLです。
 ギリシャのアテネが観測地です。
-
+<br>
 > Websdr Receiver operated by SV1RVL in Athens Greece  
   http://sv1rvl.ddns.net:8901/
 
 そして上から、見え始め、最高高度、見え終わり、左から、日付、時刻、高度、方位角、距離(km)です。
-
+<br>
 > 21/12/02 18:36:09, 40.0, 11.7, 912.5  
 21/12/02 18:37:41, 88.7, 284.2, 621.3  
 21/12/02 18:39:12, 40.0, 194.5, 911.3
@@ -108,14 +106,13 @@ SDRの電波形式をCWに、受信周波数を145.91MHzに設定すれば、
 18時39分頃までモールス信号を受信できます。
 ドップラーシフトがあるので145.91MHz周辺を調べていれば、
 それらしい信号を捉えることができます。
-
+<br>
 なお、モールス信号が解らない場合でも、
 モールス信号を解析するスマホの無料アプリがあるので、
 事前にそれを準備しておきます。
 
 <!--*****************************************************-->
 ## ファイルの説明
-
 - satellite_track.py
 <br>
 本プログラムは軌道計算のために、NORADのTLEをダウンロードします。
@@ -127,28 +124,25 @@ SDRの電波形式をCWに、受信周波数を145.91MHzに設定すれば、
   を考慮しています。
 条件2については太陽電池が発電中の時にビーコン送信パワーが大きいはずです(違いますか？)。
 条件3については気象衛星NOAAの画像受信の時の為です(必要無ければ条件から外してください)。
-
 - websdr.txt
 <br>
 WebSDR (http://www.websdr.org/)に記載されたSDRサーバーをリストにしたものです。
 ３行目はGrid Square Locatorです。
-
+<br>
 - satellite.txt
 <br>
 AMSAT (https://www.amsat.org/status/)から運用中と思われる人工衛星と、そのビーコン送信周波数をリストにしています。さらに気象衛星NOAAと国際宇宙ステーションを追加しました。
 
 <!--*****************************************************-->
 ## KOSEN-1の受信方法
-
 今回の目的である国立高専が開発した超小型衛星KOSEN-1は、100mmx100mmx200mm 2kgの大きさで、
 腕で抱えられるぐらい小さいものです。
-
-![kosen1photo](/assets/img/20211202/d31b164cea2b3eea057175dea6168e1f.jpg){: width="400" .right}
-
+<br>
+![kosen1photo](/assets/img/20211202/d31b164cea2b3eea057175dea6168e1f.jpg){: width="430" }
+<br>
 KOSEN-1の軌道要素はNORADのTLEには未だ登録されていないので、
 本プログラム中に次のように入れてやる必要があります。
 なお、KOSEN-1の軌道要素については最新のものを(ネットで探して)使うようにしてください。
-
 ```
 (省略)
 # NORADからTLEデータをダウンロードする
@@ -172,7 +166,6 @@ for satellite in satellites:
 (省略)
 
 ```
-
 このプログラムで計算した時刻 (2021年11月13日16時28分 JST)に、南アフリカのヨハネスブルグで上空を通過したKOSEN-1からのCWビーコンを受信することができました。
 そのときのSDRの画面キャプチャをYouTubeにアップしました。
 
@@ -180,7 +173,6 @@ for satellite in satellites:
 
 <!--*****************************************************-->
 ## 最後に
-
 私にとっての宇宙とは、宇宙開発事業団が独占する専門領域だったのですが、
 それが今や、学生さんの人工衛星が宇宙を飛ぶ時代になったのは感慨深いものがあります。
 このKOSEN-1を開発した学生さん達が将来にJAXAやNASAで活躍し、
@@ -188,13 +180,11 @@ for satellite in satellites:
 
 <!--*****************************************************-->
 ## 謝辞
-
 写真を使わせて頂きました。プログラム開発の参考にさせて頂きました。
 ありがとうございました。
 
-- (C) 宇宙航空研究開発機構（JAXA）
-  (https://www.jaxa.jp/)
-- 大阪市立科学館
-  (http://www.sci-museum.kita.osaka.jp/~egoshi/astronomy/python/python_iss_skyfield.html)
+- [(C) 宇宙航空研究開発機構（JAXA）](https://www.jaxa.jp/)
+- [大阪市立科学館](http://www.sci-museum.kita.osaka.jp/~egoshi/astronomy/python/python_iss_skyfield.html)
+
 
 

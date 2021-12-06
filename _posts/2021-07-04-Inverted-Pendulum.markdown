@@ -22,7 +22,7 @@ tags: [InvertedPendulum]
 ## Source Code
 Source code may be found as the Python3 program in the GitHub repository.
 
-<https://github.com/HideoMiyauchi/InvertedPendulum>
+[github.com/HideoMiyauchi/InvertedPendulum](https://github.com/HideoMiyauchi/InvertedPendulum)
 
 <!--*****************************************************-->
 ## Usage
